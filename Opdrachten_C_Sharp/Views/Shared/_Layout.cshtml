@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Opdrachten_C_Sharp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Opdracht 1
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Opdracht1" asp-action="Opdracht1_1">Opdracht 1.1</a></li>
+                                <li><a asp-controller="Opdracht1" asp-action="Opdracht1_2">Opdracht 1.2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Opdracht 2
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Opdracht2" asp-action="Opdracht2_1">Opdracht 2.1</a></li>
+                                <li><a asp-controller="Opdracht2" asp-action="Opdracht2_2">Opdracht 2.2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Opdracht 3
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Opdracht3" asp-action="Opdracht3_3">Opdracht 3.3</a></li>
+                                <li><a asp-controller="Opdracht3" asp-action="Opdracht3_7">Opdracht 3.7</a></li>
+                                <li><a asp-controller="Opdracht3" asp-action="Opdracht3_11">Opdracht 3.11</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Opdracht 4
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Opdracht4" asp-action="Opdracht4_1">Opdracht 4.1</a></li>
+                                <li><a asp-controller="Opdracht4" asp-action="Opdracht4_2">Opdracht 4.2</a></li>
+                                <li><a asp-controller="Opdracht4" asp-action="Opdracht4_5">Opdracht 4.5</a></li>
+                                <li><a asp-controller="Opdracht4" asp-action="Opdracht4_13">Opdracht 4.13</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Opdracht 5
+                            </button>
+                            <ul class="dropdown-menu">
+                                @*<li><a asp-controller="Opdracht1" asp-action="Opdracht1_1">Opdracht 2.1</a></li>
+                                <li><a asp-controller="Opdracht1" asp-action="Opdracht1_2">Opdracht 2.2</a></li>*@
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Opdracht 6
+                            </button>
+                            <ul class="dropdown-menu">
+                                @*<li><a asp-controller="Opdracht1" asp-action="Opdracht1_1">Opdracht 2.1</a></li>
+                                <li><a asp-controller="Opdracht1" asp-action="Opdracht1_2">Opdracht 2.2</a></li>*@
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Opdracht 7
+                            </button>
+                            <ul class="dropdown-menu">
+                                @*<li><a asp-controller="Opdracht1" asp-action="Opdracht1_1">Opdracht 2.1</a></li>
+                                <li><a asp-controller="Opdracht1" asp-action="Opdracht1_2">Opdracht 2.2</a></li>*@
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ROC van Twente (Marcel Roesink)
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
